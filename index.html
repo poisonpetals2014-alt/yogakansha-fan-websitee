@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YOGAKANSHA | The Fan Universe</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Parisienne&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(116, 24, 69, 0.18), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(76, 36, 120, 0.15), transparent 35%),
+        #08070b;
+    color: #f7f0ea;
+    font-family: 'Montserrat', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #9d426e;
+    color: white;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 76px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(5, 4, 7, 0.72);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    letter-spacing: 5px;
+    color: #e3bd78;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d8d0d4;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e2b66f;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,3,8,0.92),
+            rgba(8,4,10,0.45),
+            rgba(5,3,8,0.88)
+        ),
+        url("hero.jpg") center 30% / cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(0,0,0,0.65) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    padding: 100px 25px 50px;
+}
+
+.eyebrow {
+    color: #d5a962;
+    font-size: 11px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(55px, 10vw, 125px);
+    letter-spacing: 13px;
+    font-weight: 500;
+
+    background: linear-gradient(
+        120deg,
+        #fff6df,
+        #d9a85e,
+        #fff0c7
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+
+    text-shadow: 0 10px 50px rgba(180,100,150,0.25);
+}
+
+.hero-script {
+    font-family: 'Parisienne', cursive;
+    font-size: clamp(35px, 5vw, 65px);
+    color: #e0a5bd;
+    margin-top: -10px;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 28px auto 35px;
+    line-height: 1.9;
+    color: #d0c7cd;
+    font-size: 14px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 28px;
+    border-radius: 40px;
+    border: 1px solid rgba(222,183,111,0.55);
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: 0.35s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #8c3158, #5e2142);
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(157,52,103,0.3);
+}
+
+/* ================= GENERAL ================= */
+
+section {
+    padding: 110px 7%;
+    position: relative;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading span {
+    color: #d9a964;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(30px, 5vw, 54px);
+    font-weight: 500;
+    margin-top: 13px;
+}
+
+.section-heading p {
+    color: #a9a0a6;
+    max-width: 620px;
+    margin: 18px auto 0;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+/* ================= STORY ================= */
+
+.story {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.story-text {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    line-height: 2;
+    color: #ddd3d8;
+}
+
+.story-text strong {
+    color: #e0b66e;
+}
+
+/* ================= PROFILE CARDS ================= */
+
+.profiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.profile-card {
+    position: relative;
+    min-height: 560px;
+
+    border-radius: 25px;
+    overflow: hidden;
+
+    background: #110d13;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.5s;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(216,171,99,0.4);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+}
+
+.profile-card img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 35px 30px 25px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(9,6,11,0.98) 35%
+        );
+}
+
+.profile-info h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+}
+
+.profile-info p {
+    color: #aaa0a7;
+    font-size: 12px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+        transparent,
+        #a56b87,
+        transparent
+    );
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 20px 45px;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background: #d8ad66;
+    box-shadow: 0 0 20px #c26a91;
+
+    top: 30px;
+    right: -6px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -6px;
+}
+
+.timeline-box {
+    padding: 25px;
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.07);
+
+    backdrop-filter: blur(10px);
+}
+
+.timeline-box h3 {
+    color: #dfb36c;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 8px;
+}
+
+.timeline-box p {
+    color: #a9a1a7;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ================= CHEMISTRY ================= */
+
+.chemistry {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.meter {
+    height: 16px;
+    border-radius: 30px;
+    background: #211923;
+    overflow: hidden;
+    margin: 35px 0 15px;
+}
+
+.meter-fill {
+    width: 98%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #72274b,
+        #d59d58,
+        #efc982
+    );
+
+    animation: fillMeter 2s ease forwards;
+}
+
+@keyframes fillMeter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 98%;
+    }
+}
+
+.chemistry-number {
+    font-family: 'Cinzel', serif;
+    font-size: 46px;
+    color: #e1b76f;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 18px;
+    position: relative;
+    background: #100c12;
+}
+
+.gallery-item:nth-child(1) {
+    grid-column: span 7;
+}
+
+.gallery-item:nth-child(2) {
+    grid-column: span 5;
+}
+
+.gallery-item:nth-child(3) {
+    grid-column: span 4;
+}
+
+.gallery-item:nth-child(4) {
+    grid-column: span 4;
+}
+
+.gallery-item:nth-child(5) {
+    grid-column: span 4;
+}
+
+.gallery-item:nth-child(6) {
+    grid-column: span 5;
+}
+
+.gallery-item:nth-child(7) {
+    grid-column: span 7;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.7s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-label {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    padding: 9px 14px;
+    border-radius: 20px;
+
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(10px);
+}
+
+/* ================= INSTAGRAM ================= */
+
+.instagram {
+    max-width: 850px;
+    margin: auto;
+
+    padding: 60px 40px;
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(122,40,76,0.22),
+            rgba(59,32,91,0.2)
+        );
+
+    border: 1px solid rgba(255,255,255,0.09);
+}
+
+.instagram h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 35px;
+}
+
+.instagram-handle {
+    display: inline-block;
+    margin: 20px 0;
+
+    color: #e0b36a;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.instagram p {
+    color: #aaa1a8;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ================= QUIZ ================= */
+
+.quiz {
+    max-width: 750px;
+    margin: auto;
+}
+
+.question {
+    margin-bottom: 25px;
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+.question h3 {
+    font-size: 15px;
+    margin-bottom: 17px;
+}
+
+.options {
+    display: grid;
+    gap: 9px;
+}
+
+.option {
+    padding: 12px 15px;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.07);
+
+    color: #c8c0c5;
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.option:hover {
+    border-color: #a86a87;
+    background: rgba(151,52,98,0.15);
+}
+
+.option.correct {
+    background: rgba(53,128,75,0.25);
+    border-color: #67ae7b;
+}
+
+.option.wrong {
+    background: rgba(150,43,61,0.25);
+    border-color: #bb5968;
+}
+
+.quiz-result {
+    text-align: center;
+    margin-top: 30px;
+
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    color: #dfb46d;
+}
+
+/* ================= VAULT ================= */
+
+.vault {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+
+    padding: 70px 35px;
+
+    border-radius: 35px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(111,45,137,0.2),
+            transparent 65%
+        ),
+        rgba(255,255,255,0.025);
+
+    border: 1px solid rgba(215,173,99,0.2);
+}
+
+.vault h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+}
+
+.vault p {
+    color: #a9a0a7;
+    max-width: 550px;
+    margin: 15px auto 30px;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+.password-box {
+    display: flex;
+    max-width: 450px;
+    margin: auto;
+    gap: 10px;
+}
+
+.password-box input {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.4);
+
+    color: white;
+    outline: none;
+}
+
+.password-box button {
+    border: none;
+    border-radius: 30px;
+    padding: 0 25px;
+
+    background: linear-gradient(135deg,#9b3d66,#5e2445);
+    color: white;
+
+    cursor: pointer;
+}
+
+#vaultMessage {
+    margin-top: 18px;
+    color: #d995a9;
+    font-size: 12px;
+}
+
+/* ================= GALAXY ================= */
+
+#galaxy {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1b1230 0%,
+            #090715 45%,
+            #020207 100%
+        );
+
+    overflow: hidden;
+}
+
+.galaxy-title {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    text-align: center;
+}
+
+.galaxy-title h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    color: #e5bd79;
+}
+
+.galaxy-title p {
+    color: #a89eae;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+.close-galaxy {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+
+    z-index: 20;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.06);
+
+    color: white;
+
+    padding: 10px 16px;
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.galaxy-star {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 18px #b987ff;
+
+    cursor: pointer;
+
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.35;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
+
+.star-message {
+    position: absolute;
+
+    min-width: 180px;
+    max-width: 280px;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    background: rgba(17,12,30,0.92);
+    border: 1px solid rgba(213,171,255,0.3);
+
+    color: #e8dff0;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    pointer-events: none;
+
+    opacity: 0;
+    transform: translateY(5px);
+
+    transition: 0.25s;
+
+    z-index: 50;
+}
+
+.galaxy-star:hover .star-message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.add-message {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    display: flex;
+    gap: 8px;
+
+    width: min(600px, 90%);
+}
+
+.add-message input {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: rgba(0,0,0,0.55);
+
+    color: white;
+    outline: none;
+}
+
+.add-message button {
+    padding: 0 23px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(135deg,#a34a78,#5b347f);
+
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 50px 20px;
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.06);
+
+    color: #756d74;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.footer-logo {
+    font-family: 'Cinzel', serif;
+    color: #d5a761;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+/* ================= REVEAL ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 800px) {
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    .profiles {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 40px;
+        padding-right: 0;
+    }
+
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 4px;
+        right: auto;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 230px;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        grid-column: span 1;
+    }
+
+    .gallery-item:nth-child(1) {
+        grid-column: span 2;
+    }
+
+    .gallery-item:nth-child(7) {
+        grid-column: span 2;
+    }
+
+    .password-box {
+        flex-direction: column;
+    }
+
+    .password-box button {
+        padding: 14px;
+    }
+
+    .add-message {
+        flex-direction: column;
+    }
+
+    .add-message button {
+        padding: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+    <div class="logo">YOGAKANSHA</div>
+
+    <ul class="nav-links">
+        <li><a href="#story">Story</a></li>
+        <li><a href="#duo">The Duo</a></li>
+        <li><a href="#timeline">Moments</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#vault">Vault</a></li>
+    </ul>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            The Fan Universe
+        </div>
+
+        <h1>YOGAKANSHA</h1>
+
+        <div class="hero-script">
+            Two people. One universe.
+        </div>
+
+        <p class="hero-description">
+            A cinematic fan space dedicated to the moments, memories,
+            energy and unforgettable chemistry that made fans fall in love
+            with Yogesh Rawat and Akanksha Choudhary.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#gallery" class="btn btn-primary">
+                Enter the Universe
+            </a>
+
+            <a href="#vault" class="btn btn-secondary">
+                Open Secret Vault
+            </a>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= STORY ================= -->
+
+<section id="story">
+
+    <div class="section-heading reveal">
+        <span>The Beginning</span>
+        <h2>The YOGAKANSHA Story</h2>
+    </div>
+
+    <div class="story reveal">
+
+        <p class="story-text">
+            Some fandoms begin with a single moment.
+            Some begin with a smile, a scene, a conversation
+            or a look that fans simply cannot forget.
+            <br><br>
+            <strong>YOGAKANSHA</strong> is a universe built around
+            those moments.
+            <br><br>
+            Every picture holds a memory.
+            Every memory becomes a story.
+            And every story becomes part of the fandom.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DUO ================= -->
+
+<section id="duo">
+
+    <div class="section-heading reveal">
+
+        <span>The Duo</span>
+
+        <h2>Yogesh & Akanksha</h2>
+
+        <p>
+            Two personalities. Two journeys. One unforgettable
+            fandom connection.
+        </p>
+
+    </div>
+
+
+    <div class="profiles">
+
+        <article class="profile-card reveal">
+
+            <img src="yogesh.jpg" alt="Yogesh">
+
+            <div class="profile-info">
+                <h3>Yogesh Rawat</h3>
+                <p>THE ENERGY</p>
+            </div>
+
+        </article>
+
+
+        <article class="profile-card reveal">
+
+            <img src="akanksha.jpg" alt="Akanksha">
+
+            <div class="profile-info">
+                <h3>Akanksha Choudhary</h3>
+                <p>THE SPARK</p>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TIMELINE ================= -->
+
+<section id="timeline">
+
+    <div class="section-heading reveal">
+
+        <span>Memories</span>
+
+        <h2>Moments That Stay</h2>
+
+        <p>
+            A fan-made timeline celebrating the little moments
+            that became big memories.
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-box">
+                <h3>The First Spark</h3>
+
+                <p>
+                    Every fandom has that first moment when
+                    something simply clicks.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-box">
+                <h3>The Growing Fandom</h3>
+
+                <p>
+                    More moments, more edits, more conversations
+                    and an entire community slowly taking shape.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-box">
+                <h3>The Iconic Moments</h3>
+
+                <p>
+                    The pictures and scenes that fans return to
+                    again and again.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-box">
+                <h3>The YOGAKANSHA Era</h3>
+
+                <p>
+                    A fandom becomes more than a name.
+                    It becomes a universe.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CHEMISTRY ================= -->
+
+<section>
+
+    <div class="section-heading reveal">
+
+        <span>The Fandom Meter</span>
+
+        <h2>YOGAKANSHA Chemistry</h2>
+
+    </div>
+
+
+    <div class="chemistry reveal">
+
+        <div class="chemistry-number">
+            98%
+        </div>
+
+        <div class="meter">
+            <div class="meter-fill"></div>
+        </div>
+
+        <p style="color:#9f969d;font-size:12px;">
+            Fan-made. Completely unofficial. Powered by pure fandom energy.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+    <div class="section-heading reveal">
+
+        <span>The Archive</span>
+
+        <h2>YOGAKANSHA Gallery</h2>
+
+        <p>
+            A visual collection created for the fandom.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item reveal">
+            <img src="together4.jpg" alt="Yogesh and Akanksha">
+            <div class="gallery-label">Together</div>
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="together1.jpg" alt="Yogesh and Akanksha">
+            <div class="gallery-label">Moments</div>
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="together2.jpg" alt="Yogesh and Akanksha">
+            <div class="gallery-label">Memories</div>
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="together3.jpg" alt="Yogesh and Akanksha">
+            <div class="gallery-label">The Duo</div>
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="yogesh.jpg" alt="Yogesh">
+            <div class="gallery-label">Yogesh</div>
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="akanksha.jpg" alt="Akanksha">
+            <div class="gallery-label">Akanksha</div>
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="hero.jpg" alt="YOGAKANSHA">
+            <div class="gallery-label">YOGAKANSHA</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INSTAGRAM ================= -->
+
+<section>
+
+    <div class="instagram reveal">
+
+        <h2>Join The Fandom</h2>
+
+        <a
+            class="instagram-handle"
+            href="https://www.instagram.com/yogankshafanpage1/"
+            target="_blank"
+        >
+            @yogankshafanpage1
+        </a>
+
+        <p>
+            Follow the fan page for edits, moments, updates
+            and everything YOGAKANSHA.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUIZ ================= -->
+
+<section id="quiz">
+
+    <div class="section-heading reveal">
+
+        <span>Fan Test</span>
+
+        <h2>How Well Do You Know YOGAKANSHA?</h2>
+
+        <p>
+            Think you are a true fan? Let's find out.
+        </p>
+
+    </div>
+
+
+    <div class="quiz">
+
+        <div class="question reveal">
+
+            <h3>1. What is this fandom universe called?</h3>
+
+            <div class="options">
+
+                <div class="option" onclick="answer(this,false)">
+                    YOGESHIA
+                </div>
+
+                <div class="option" onclick="answer(this,true)">
+                    YOGAKANSHA
+                </div>
+
+                <div class="option" onclick="answer(this,false)">
+                    AKAYOG
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question reveal">
+
+            <h3>2. Who are the two people celebrated here?</h3>
+
+            <div class="options">
+
+                <div class="option" onclick="answer(this,true)">
+                    Yogesh Rawat and Akanksha Choudhary
+                </div>
+
+                <div class="option" onclick="answer(this,false)">
+                    Two fictional characters
+                </div>
+
+                <div class="option" onclick="answer(this,false)">
+                    Two musicians
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question reveal">
+
+            <h3>3. What is the secret vault password?</h3>
+
+            <div class="options">
+
+                <div class="option" onclick="answer(this,false)">
+                    FANLOVE
+                </div>
+
+                <div class="option" onclick="answer(this,false)">
+                    GALAXY
+                </div>
+
+                <div class="option" onclick="answer(this,true)">
+                    YOGAKANSHA
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question reveal">
+
+            <h3>4. What happens inside the secret galaxy?</h3>
+
+            <div class="options">
+
+                <div class="option" onclick="answer(this,true)">
+                    Fans can leave glowing messages
+                </div>
+
+                <div class="option" onclick="answer(this,false)">
+                    Nothing
+                </div>
+
+                <div class="option" onclick="answer(this,false)">
+                    It opens another website
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question reveal">
+
+            <h3>5. What powers this website?</h3>
+
+            <div class="options">
+
+                <div class="option" onclick="answer(this,true)">
+                    Fandom
+                </div>
+
+                <div class="option" onclick="answer(this,false)">
+                    Magic
+                </div>
+
+                <div class="option" onclick="answer(this,false)">
+                    Secret technology
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="quizResult" class="quiz-result"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SECRET VAULT ================= -->
+
+<section id="vault">
+
+    <div class="vault reveal">
+
+        <h2>The Secret Vault</h2>
+
+        <p>
+            There is a hidden corner of the YOGAKANSHA universe.
+            Enter the password to unlock the galaxy.
+        </p>
+
+
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter the secret password"
+            >
+
+            <button onclick="openVault()">
+                Unlock
+            </button>
+
+        </div>
+
+        <div id="vaultMessage"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALAXY ================= -->
+
+<div id="galaxy">
+
+    <button class="close-galaxy" onclick="closeVault()">
+        Close
+    </button>
+
+
+    <div class="galaxy-title">
+
+        <h2>The YOGAKANSHA Galaxy</h2>
+
+        <p>
+            Leave a message. Turn it into a star.
+        </p>
+
+    </div>
+
+
+    <div id="stars"></div>
+
+
+    <div class="add-message">
+
+        <input
+            type="text"
+            id="fanMessage"
+            maxlength="150"
+            placeholder="Write a message for the galaxy..."
+        >
+
+        <button onclick="addStar()">
+            Create Star
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        YOGAKANSHA
+    </div>
+
+    <p>
+        A fan-made universe created with love for the fandom.
+    </p>
+
+</footer>
+
+
+<script>
+
+/* ================= SCROLL REVEAL ================= */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+
+    revealElements.forEach(element => {
+
+        const position = element.getBoundingClientRect().top;
+
+        if(position < window.innerHeight - 80) {
+            element.classList.add("visible");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+
+
+/* ================= QUIZ ================= */
+
+let score = 0;
+let answered = 0;
+
+function answer(element, correct) {
+
+    const parent = element.parentElement;
+
+    if(parent.dataset.done === "true") {
+        return;
+    }
+
+    parent.dataset.done = "true";
+
+    if(correct) {
+
+        element.classList.add("correct");
+        score++;
+
+    } else {
+
+        element.classList.add("wrong");
+
+    }
+
+    answered++;
+
+    if(answered === 5) {
+
+        document.getElementById("quizResult").innerHTML =
+            "Your YOGAKANSHA score: " + score + " / 5";
+
+    }
+
+}
+
+
+/* ================= VAULT ================= */
+
+function openVault() {
+
+    const password =
+        document.getElementById("password").value.trim();
+
+    const message =
+        document.getElementById("vaultMessage");
+
+    if(password === "YOGAKANSHA") {
+
+        document.getElementById("galaxy").style.display = "block";
+
+        createBackgroundStars();
+
+        message.innerHTML = "";
+
+    } else {
+
+        message.innerHTML =
+            "That is not the secret password.";
+
+    }
+
+}
+
+
+function closeVault() {
+
+    document.getElementById("galaxy").style.display = "none";
+
+}
+
+
+/* ================= GALAXY STARS ================= */
+
+function createBackgroundStars() {
+
+    const container =
+        document.getElementById("stars");
+
+    if(container.dataset.created === "true") {
+        return;
+    }
+
+    container.dataset.created = "true";
+
+    for(let i = 0; i < 90; i++) {
+
+        const star =
+            document.createElement("div");
+
+        star.className = "galaxy-star";
+
+        star.style.left =
+            Math.random() * 100 + "%";
+
+        star.style.top =
+            Math.random() * 100 + "%";
+
+        star.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        container.appendChild(star);
+
+    }
+
+}
+
+
+/* ================= FAN MESSAGE STAR ================= */
+
+function addStar() {
+
+    const input =
+        document.getElementById("fanMessage");
+
+    const message =
+        input.value.trim();
+
+    if(message === "") {
+        return;
+    }
+
+    const star =
+        document.createElement("div");
+
+    star.className = "galaxy-star";
+
+    star.style.left =
+        (10 + Math.random() * 80) + "%";
+
+    star.style.top =
+        (15 + Math.random() * 70) + "%";
+
+    const messageBox =
+        document.createElement("div");
+
+    messageBox.className = "star-message";
+
+    messageBox.textContent = message;
+
+    star.appendChild(messageBox);
+
+    document.getElementById("stars").appendChild(star);
+
+    input.value = "";
+
+}
+
+</script>
+
+</body>
+</html>
